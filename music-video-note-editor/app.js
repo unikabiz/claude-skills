@@ -28,6 +28,7 @@ const NOTE_COLORS = {
 // Inicialização quando a página carregar
 document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
+    initializeModules();
 });
 
 // YouTube API Ready
@@ -72,8 +73,52 @@ function setupEventListeners() {
     document.getElementById('projectFileInput').addEventListener('change', loadProjectFile);
     document.getElementById('exportNotes').addEventListener('click', exportNotesCSV);
 
+    // Transcription
+    const transcribeBtn = document.getElementById('transcribeAudio');
+    if (transcribeBtn) {
+        transcribeBtn.addEventListener('click', () => TranscriptionHandler.transcribeVideo());
+    }
+
+    // MIDI
+    const connectMIDIBtn = document.getElementById('connectMIDI');
+    if (connectMIDIBtn) {
+        connectMIDIBtn.addEventListener('click', () => MIDIHandler.connect());
+    }
+
+    // Practice Mode
+    const startPracticeBtn = document.getElementById('startPractice');
+    const stopPracticeBtn = document.getElementById('stopPractice');
+    const resetPracticeBtn = document.getElementById('resetPractice');
+
+    if (startPracticeBtn) startPracticeBtn.addEventListener('click', () => PracticeMode.start());
+    if (stopPracticeBtn) stopPracticeBtn.addEventListener('click', () => PracticeMode.stop());
+    if (resetPracticeBtn) resetPracticeBtn.addEventListener('click', () => PracticeMode.reset());
+
+    // Score Generation
+    const generateScoreBtn = document.getElementById('generateScore');
+    if (generateScoreBtn) {
+        generateScoreBtn.addEventListener('click', () => ScoreRenderer.generateScore());
+    }
+
     // Update timeline periodically
     setInterval(updateTimeline, 100);
+}
+
+// Inicializar módulos
+function initializeModules() {
+    // Inicializar modo prática
+    if (typeof PracticeMode !== 'undefined') {
+        PracticeMode.init();
+    }
+
+    // Tentar inicializar MIDI automaticamente (não bloqueia se falhar)
+    if (typeof MIDIHandler !== 'undefined') {
+        MIDIHandler.init().catch(err => {
+            console.log('MIDI não disponível:', err.message);
+        });
+    }
+
+    console.log('Módulos inicializados!');
 }
 
 // Extrair ID do vídeo do YouTube

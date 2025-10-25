@@ -37,9 +37,91 @@
                 </div>
             </section>
 
+            <!-- Transcrição de Áudio -->
+            <section class="transcription-section">
+                <h2>3. Transcrição Automática (Áudio → MIDI)</h2>
+                <div class="transcription-controls">
+                    <p>Extraia as notas automaticamente do áudio do vídeo usando IA</p>
+                    <button id="transcribeAudio" class="feature-btn">🎵 Transcrever Áudio (Basic Pitch)</button>
+                    <div id="transcriptionStatus" class="status-message"></div>
+                    <div class="transcription-options">
+                        <label><input type="checkbox" id="autoAddTranscribedNotes" checked> Adicionar notas transcritas automaticamente</label>
+                        <label>Confiança mínima: <input type="range" id="confidenceThreshold" min="0" max="100" value="70"> <span id="confidenceValue">70%</span></label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conexão MIDI -->
+            <section class="midi-section">
+                <h2>4. Conectar Teclado MIDI</h2>
+                <div class="midi-controls">
+                    <p>Conecte seu teclado MIDI e pratique em tempo real</p>
+                    <button id="connectMIDI" class="feature-btn">🎹 Conectar Teclado MIDI</button>
+                    <div id="midiStatus" class="status-message">Status: Desconectado</div>
+                    <div id="midiDevices" class="device-list"></div>
+                    <div class="midi-monitor">
+                        <h4>Últimas Notas Tocadas:</h4>
+                        <div id="midiNoteDisplay" class="note-display"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modo Prática -->
+            <section class="practice-section">
+                <h2>5. Modo Prática Guiada</h2>
+                <div class="practice-controls">
+                    <p>Pratique com feedback em tempo real - toque as notas corretas no momento certo!</p>
+                    <div class="practice-buttons">
+                        <button id="startPractice" class="practice-btn">▶️ Iniciar Prática</button>
+                        <button id="stopPractice" class="practice-btn" disabled>⏹️ Parar Prática</button>
+                        <button id="resetPractice" class="practice-btn">🔄 Reiniciar</button>
+                    </div>
+                    <div class="practice-stats">
+                        <div class="stat-box">
+                            <h4>Acertos</h4>
+                            <div id="correctNotes" class="stat-value">0</div>
+                        </div>
+                        <div class="stat-box">
+                            <h4>Erros</h4>
+                            <div id="wrongNotes" class="stat-value">0</div>
+                        </div>
+                        <div class="stat-box">
+                            <h4>Precisão</h4>
+                            <div id="accuracy" class="stat-value">100%</div>
+                        </div>
+                        <div class="stat-box">
+                            <h4>Streak</h4>
+                            <div id="streak" class="stat-value">0 🔥</div>
+                        </div>
+                    </div>
+                    <div class="practice-feedback">
+                        <div id="feedbackMessage" class="feedback-message"></div>
+                        <canvas id="noteVisualization" width="800" height="200"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partitura -->
+            <section class="score-section">
+                <h2>6. Visualização de Partitura</h2>
+                <div class="score-controls">
+                    <button id="generateScore" class="feature-btn">📝 Gerar Partitura (VexFlow)</button>
+                    <div class="score-options">
+                        <label>Clave:
+                            <select id="clefType">
+                                <option value="treble">Sol (Treble)</option>
+                                <option value="bass">Fá (Bass)</option>
+                            </select>
+                        </label>
+                        <label>Tempo: <input type="text" id="timeSignature" value="4/4" placeholder="4/4"></label>
+                    </div>
+                </div>
+                <div id="scoreOutput" class="score-output"></div>
+            </section>
+
             <!-- Editor de notas -->
             <section class="notes-editor-section">
-                <h2>3. Adicionar Notas Musicais</h2>
+                <h2>7. Adicionar Notas Manualmente</h2>
 
                 <div class="note-controls">
                     <div class="note-selector">
@@ -83,7 +165,7 @@
 
             <!-- Gerador de prompts educacionais -->
             <section class="prompts-section">
-                <h2>4. Prompts e Dicas de Aprendizado</h2>
+                <h2>8. Prompts e Dicas de Aprendizado</h2>
                 <button id="generatePrompt">🤖 Gerar Dicas Automáticas</button>
                 <div class="prompt-container">
                     <h3>Dicas de Técnica:</h3>
@@ -100,7 +182,7 @@
 
             <!-- Exportação -->
             <section class="export-section">
-                <h2>5. Salvar e Exportar</h2>
+                <h2>9. Salvar e Exportar</h2>
                 <div class="export-controls">
                     <button id="saveProject">💾 Salvar Projeto (JSON)</button>
                     <button id="loadProject">📂 Carregar Projeto</button>
@@ -117,6 +199,18 @@
 
     <!-- YouTube API -->
     <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!-- VexFlow for music notation -->
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@4.2.2/build/cjs/vexflow.js"></script>
+
+    <!-- WebMIDI.js for MIDI support -->
+    <script src="https://cdn.jsdelivr.net/npm/webmidi@3.1.6/dist/iife/webmidi.iife.js"></script>
+
+    <!-- Main application scripts -->
+    <script src="midi-handler.js"></script>
+    <script src="transcription-handler.js"></script>
+    <script src="practice-mode.js"></script>
+    <script src="score-renderer.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
