@@ -1,0 +1,61 @@
+{
+  "name": "base-utilities",
+  "version": "1.0.0",
+  "description": "Foundation utilities providing core functionality for text processing, file handling, and data validation",
+  "author": {
+    "name": "Example Developer",
+    "email": "dev@example.com",
+    "url": "https://example.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/base-utilities"
+  },
+  "keywords": [
+    "utilities",
+    "foundation",
+    "text-processing",
+    "validation"
+  ],
+  "category": "development",
+  "skills": [
+    {
+      "path": "./skills/text-processor",
+      "required": true,
+      "enabled": true
+    },
+    {
+      "path": "./skills/file-handler",
+      "required": true,
+      "enabled": true
+    },
+    {
+      "path": "./skills/validator",
+      "required": true,
+      "enabled": true
+    }
+  ],
+  "dependencies": {},
+  "systemRequirements": {
+    "minVersion": "1.0.0",
+    "platforms": ["linux", "darwin", "win32"]
+  },
+  "permissions": {
+    "filesystem": ["read", "write"],
+    "tools": ["node"]
+  },
+  "hooks": {
+    "onInstall": "./scripts/install.sh",
+    "onActivate": "./scripts/activate.sh"
+  },
+  "config": {
+    "maxFileSize": "10MB",
+    "textEncoding": "utf-8"
+  },
+  "metadata": {
+    "homepage": "https://example.com/base-utilities",
+    "documentation": "https://docs.example.com/base-utilities",
+    "tags": ["core", "foundation", "utilities"]
+  }
+}

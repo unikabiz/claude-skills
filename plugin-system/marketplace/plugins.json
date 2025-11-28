@@ -1,0 +1,206 @@
+{
+  "marketplaceName": "Claude Skills Official Marketplace",
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-28T00:00:00Z",
+  "description": "Official marketplace for Claude Skills plugins",
+  "url": "https://github.com/anthropics/claude-skills",
+  "plugins": [
+    {
+      "name": "productivity-pack",
+      "version": "1.0.0",
+      "description": "Task management and note-taking skills for productivity",
+      "category": "productivity",
+      "author": {
+        "name": "Example Author",
+        "email": "author@example.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "examples/productivity-pack",
+      "verified": true,
+      "featured": true,
+      "downloads": 1250,
+      "rating": 4.8,
+      "tags": ["productivity", "tasks", "notes"],
+      "skills": ["task-manager", "note-taker"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/examples/productivity-pack",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/examples/productivity-pack/CHANGELOG.md"
+    },
+    {
+      "name": "base-utilities",
+      "version": "1.0.0",
+      "description": "Foundation utilities for text processing, file handling, and validation",
+      "category": "development",
+      "author": {
+        "name": "Example Developer",
+        "email": "dev@example.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "examples/base-utilities",
+      "verified": true,
+      "featured": true,
+      "downloads": 2840,
+      "rating": 4.9,
+      "tags": ["utilities", "foundation", "text-processing", "validation"],
+      "skills": ["text-processor", "file-handler", "validator"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "MIT",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/examples/base-utilities",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/examples/base-utilities/CHANGELOG.md"
+    },
+    {
+      "name": "creative-tools",
+      "version": "1.0.0",
+      "description": "Creative design tools for colors, ASCII art, and layouts",
+      "category": "creative",
+      "author": {
+        "name": "Creative Developer",
+        "email": "creative@example.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "examples/creative-tools",
+      "verified": true,
+      "featured": true,
+      "downloads": 1680,
+      "rating": 4.7,
+      "tags": ["creative", "design", "colors", "ascii-art"],
+      "skills": ["color-palette", "ascii-art", "layout-designer"],
+      "dependencies": {
+        "base-utilities": "^1.0.0"
+      },
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/examples/creative-tools",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/examples/creative-tools/CHANGELOG.md"
+    },
+    {
+      "name": "document-skills",
+      "version": "1.0.0",
+      "description": "Document processing suite for Excel, Word, PowerPoint, and PDF",
+      "category": "productivity",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "document-skills",
+      "verified": true,
+      "featured": true,
+      "downloads": 5420,
+      "rating": 4.9,
+      "tags": ["documents", "pdf", "excel", "word", "powerpoint"],
+      "skills": ["xlsx", "docx", "pptx", "pdf"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Source Available",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/document-skills",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/document-skills/CHANGELOG.md"
+    },
+    {
+      "name": "algorithmic-art",
+      "version": "1.0.0",
+      "description": "Create generative art using p5.js with algorithmic techniques",
+      "category": "creative",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "algorithmic-art",
+      "verified": true,
+      "featured": false,
+      "downloads": 892,
+      "rating": 4.6,
+      "tags": ["art", "generative", "p5js", "creative"],
+      "skills": ["algorithmic-art"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/algorithmic-art",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/algorithmic-art/CHANGELOG.md"
+    },
+    {
+      "name": "webapp-testing",
+      "version": "1.0.0",
+      "description": "Test local web applications using Playwright for UI verification",
+      "category": "development",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "webapp-testing",
+      "verified": true,
+      "featured": false,
+      "downloads": 1523,
+      "rating": 4.5,
+      "tags": ["testing", "playwright", "automation", "qa"],
+      "skills": ["webapp-testing"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"],
+        "node": ">=16.0.0"
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/webapp-testing",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/webapp-testing/CHANGELOG.md"
+    }
+  ],
+  "categories": [
+    {
+      "id": "productivity",
+      "name": "Productivity",
+      "description": "Skills for task management, note-taking, and workflow optimization",
+      "icon": "📋"
+    },
+    {
+      "id": "creative",
+      "name": "Creative",
+      "description": "Skills for design, art, and creative workflows",
+      "icon": "🎨"
+    },
+    {
+      "id": "development",
+      "name": "Development",
+      "description": "Skills for software development and technical tasks",
+      "icon": "💻"
+    },
+    {
+      "id": "data-analysis",
+      "name": "Data Analysis",
+      "description": "Skills for data processing and analysis",
+      "icon": "📊"
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "description": "Skills for writing and communication tasks",
+      "icon": "✉️"
+    }
+  ],
+  "featured": [
+    "base-utilities",
+    "creative-tools",
+    "productivity-pack",
+    "document-skills"
+  ]
+}

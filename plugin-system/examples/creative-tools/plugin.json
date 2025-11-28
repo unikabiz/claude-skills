@@ -1,0 +1,70 @@
+{
+  "name": "creative-tools",
+  "version": "1.0.0",
+  "description": "Creative design tools for generating color palettes, creating ASCII art, and designing layouts with text processing capabilities",
+  "author": {
+    "name": "Creative Developer",
+    "email": "creative@example.com",
+    "url": "https://example.com/creative"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/creative-tools"
+  },
+  "keywords": [
+    "creative",
+    "design",
+    "colors",
+    "ascii-art",
+    "layout"
+  ],
+  "category": "creative",
+  "skills": [
+    {
+      "path": "./skills/color-palette",
+      "required": true,
+      "enabled": true
+    },
+    {
+      "path": "./skills/ascii-art",
+      "required": true,
+      "enabled": true
+    },
+    {
+      "path": "./skills/layout-designer",
+      "required": false,
+      "enabled": true
+    }
+  ],
+  "dependencies": {
+    "base-utilities": "^1.0.0"
+  },
+  "systemRequirements": {
+    "minVersion": "1.0.0",
+    "platforms": ["linux", "darwin", "win32"]
+  },
+  "permissions": {
+    "filesystem": ["read", "write"],
+    "network": ["https"]
+  },
+  "hooks": {
+    "onInstall": "./scripts/install.sh",
+    "onActivate": "./scripts/activate.sh",
+    "onUpdate": "./scripts/update.sh"
+  },
+  "config": {
+    "colorSystem": "hex",
+    "asciiWidth": 80,
+    "defaultTheme": "modern"
+  },
+  "metadata": {
+    "homepage": "https://example.com/creative-tools",
+    "documentation": "https://docs.example.com/creative-tools",
+    "tags": ["design", "creative", "colors", "ascii"],
+    "screenshots": [
+      "https://example.com/screenshots/palette.png",
+      "https://example.com/screenshots/ascii.png"
+    ]
+  }
+}
