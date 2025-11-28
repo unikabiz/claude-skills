@@ -13,10 +13,18 @@ def validate_skill(skill_path):
     """Basic validation of a skill"""
     skill_path = Path(skill_path)
 
+    # Handle both directory paths and direct SKILL.md file paths
+    if skill_path.is_file() and skill_path.name == 'SKILL.md':
+        skill_md = skill_path
+    elif skill_path.is_dir():
+        skill_md = skill_path / 'SKILL.md'
+    else:
+        # Assume it's a path that should point to SKILL.md
+        skill_md = skill_path
+
     # Check SKILL.md exists
-    skill_md = skill_path / 'SKILL.md'
     if not skill_md.exists():
-        return False, "SKILL.md not found"
+        return False, f"SKILL.md not found at {skill_md}"
 
     # Read and validate frontmatter
     content = skill_md.read_text()
@@ -87,9 +95,12 @@ def validate_skill(skill_path):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python quick_validate.py <skill_directory>")
+        print("Usage: python quick_validate.py <skill_directory_or_SKILL.md_path>")
+        print("\nExamples:")
+        print("  python quick_validate.py my-skill/")
+        print("  python quick_validate.py my-skill/SKILL.md")
         sys.exit(1)
-    
+
     valid, message = validate_skill(sys.argv[1])
     print(message)
     sys.exit(0 if valid else 1)
