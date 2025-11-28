@@ -1,0 +1,56 @@
+{
+  "name": "productivity-pack",
+  "version": "1.0.0",
+  "description": "A collection of productivity-focused skills for task management, note-taking, and workflow automation",
+  "author": {
+    "name": "Example Author",
+    "email": "author@example.com",
+    "url": "https://example.com"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/productivity-pack"
+  },
+  "keywords": [
+    "productivity",
+    "tasks",
+    "notes",
+    "workflow"
+  ],
+  "category": "productivity",
+  "skills": [
+    {
+      "path": "./skills/task-manager",
+      "required": true,
+      "enabled": true
+    },
+    {
+      "path": "./skills/note-taker",
+      "required": true,
+      "enabled": true
+    }
+  ],
+  "dependencies": {},
+  "systemRequirements": {
+    "minVersion": "1.0.0",
+    "platforms": ["linux", "darwin", "win32"]
+  },
+  "permissions": {
+    "filesystem": ["read", "write"],
+    "network": ["https"]
+  },
+  "hooks": {
+    "onInstall": "./scripts/install.sh",
+    "onActivate": "./scripts/activate.sh"
+  },
+  "config": {
+    "defaultTaskPriority": "medium",
+    "noteFormat": "markdown"
+  },
+  "metadata": {
+    "homepage": "https://example.com/productivity-pack",
+    "documentation": "https://docs.example.com/productivity-pack",
+    "tags": ["tasks", "productivity", "organization"]
+  }
+}
