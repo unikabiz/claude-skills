@@ -45,3 +45,6 @@ coverage/
 tmp/
 temp/
 *.tmp
+
+# Plugin runtime data
+.claude-plugin/

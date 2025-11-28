@@ -144,11 +144,11 @@ export interface PluginFilter {
 
 export interface ValidationResult {
   valid: boolean;
-  errors: ValidationError[];
+  errors: ValidationIssue[];
   warnings: ValidationWarning[];
 }
 
-export interface ValidationError {
+export interface ValidationIssue {
   code: string;
   message: string;
   path?: string;

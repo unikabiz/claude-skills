@@ -4,7 +4,7 @@ import * as crypto from 'crypto';
 import {
   PluginManifest,
   ValidationResult,
-  ValidationError,
+  ValidationIssue,
   ValidationWarning,
   SystemRequirements
 } from './types';
@@ -23,7 +23,7 @@ export class Validator {
    * Validate a plugin manifest
    */
   async validate(manifest: unknown, pluginPath: string): Promise<ValidationResult> {
-    const errors: ValidationError[] = [];
+    const errors: ValidationIssue[] = [];
     const warnings: ValidationWarning[] = [];
 
     // Type check
@@ -244,7 +244,7 @@ export class Validator {
    */
   private validatePermissions(
     permissions: any,
-    errors: ValidationError[],
+    errors: ValidationIssue[],
     warnings: ValidationWarning[]
   ): void {
     const dangerousPermissions = ['write', 'delete'];
@@ -288,7 +288,7 @@ export class Validator {
    */
   private validateSystemRequirements(
     requirements: SystemRequirements,
-    errors: ValidationError[],
+    errors: ValidationIssue[],
     warnings: ValidationWarning[]
   ): void {
     const currentPlatform = process.platform;
@@ -325,7 +325,7 @@ export class Validator {
   private async validateHooks(
     hooks: any,
     pluginPath: string,
-    errors: ValidationError[],
+    errors: ValidationIssue[],
     warnings: ValidationWarning[]
   ): Promise<void> {
     const validHooks = [
