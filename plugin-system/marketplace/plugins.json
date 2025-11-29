@@ -1,7 +1,7 @@
 {
   "marketplaceName": "Claude Skills Official Marketplace",
-  "version": "1.0.0",
-  "lastUpdated": "2025-01-28T00:00:00Z",
+  "version": "1.1.0",
+  "lastUpdated": "2025-01-28T15:00:00Z",
   "description": "Official marketplace for Claude Skills plugins",
   "url": "https://github.com/anthropics/claude-skills",
   "plugins": [
@@ -15,7 +15,7 @@
         "email": "author@example.com"
       },
       "repository": "https://github.com/anthropics/claude-skills",
-      "source": "examples/productivity-pack",
+      "source": "plugin-system/examples/productivity-pack",
       "verified": true,
       "featured": true,
       "downloads": 1250,
@@ -28,8 +28,8 @@
         "platforms": ["linux", "darwin", "win32"]
       },
       "license": "Apache-2.0",
-      "documentation": "https://github.com/anthropics/claude-skills/tree/main/examples/productivity-pack",
-      "changelog": "https://github.com/anthropics/claude-skills/blob/main/examples/productivity-pack/CHANGELOG.md"
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/plugin-system/examples/productivity-pack",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/plugin-system/examples/productivity-pack/CHANGELOG.md"
     },
     {
       "name": "base-utilities",
@@ -41,7 +41,7 @@
         "email": "dev@example.com"
       },
       "repository": "https://github.com/anthropics/claude-skills",
-      "source": "examples/base-utilities",
+      "source": "plugin-system/examples/base-utilities",
       "verified": true,
       "featured": true,
       "downloads": 2840,
@@ -54,8 +54,8 @@
         "platforms": ["linux", "darwin", "win32"]
       },
       "license": "MIT",
-      "documentation": "https://github.com/anthropics/claude-skills/tree/main/examples/base-utilities",
-      "changelog": "https://github.com/anthropics/claude-skills/blob/main/examples/base-utilities/CHANGELOG.md"
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/plugin-system/examples/base-utilities",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/plugin-system/examples/base-utilities/CHANGELOG.md"
     },
     {
       "name": "creative-tools",
@@ -67,7 +67,7 @@
         "email": "creative@example.com"
       },
       "repository": "https://github.com/anthropics/claude-skills",
-      "source": "examples/creative-tools",
+      "source": "plugin-system/examples/creative-tools",
       "verified": true,
       "featured": true,
       "downloads": 1680,
@@ -82,8 +82,8 @@
         "platforms": ["linux", "darwin", "win32"]
       },
       "license": "Apache-2.0",
-      "documentation": "https://github.com/anthropics/claude-skills/tree/main/examples/creative-tools",
-      "changelog": "https://github.com/anthropics/claude-skills/blob/main/examples/creative-tools/CHANGELOG.md"
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/plugin-system/examples/creative-tools",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/plugin-system/examples/creative-tools/CHANGELOG.md"
     },
     {
       "name": "document-skills",
@@ -163,6 +163,240 @@
       "license": "Apache-2.0",
       "documentation": "https://github.com/anthropics/claude-skills/tree/main/webapp-testing",
       "changelog": "https://github.com/anthropics/claude-skills/blob/main/webapp-testing/CHANGELOG.md"
+    },
+    {
+      "name": "brand-guidelines",
+      "version": "1.0.0",
+      "description": "Apply Anthropic's official brand colors and typography to artifacts",
+      "category": "creative",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "brand-guidelines",
+      "verified": true,
+      "featured": false,
+      "downloads": 745,
+      "rating": 4.7,
+      "tags": ["branding", "design", "style", "anthropic"],
+      "skills": ["brand-guidelines"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/brand-guidelines",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/brand-guidelines/CHANGELOG.md"
+    },
+    {
+      "name": "canvas-design",
+      "version": "1.0.0",
+      "description": "Design beautiful visual art in PNG and PDF formats using design philosophies",
+      "category": "creative",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "canvas-design",
+      "verified": true,
+      "featured": false,
+      "downloads": 623,
+      "rating": 4.5,
+      "tags": ["design", "visual", "art", "canvas"],
+      "skills": ["canvas-design"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/canvas-design",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/canvas-design/CHANGELOG.md"
+    },
+    {
+      "name": "frontend-design",
+      "version": "1.0.0",
+      "description": "Frontend design skill for creating modern, responsive web interfaces",
+      "category": "development",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "frontend-design",
+      "verified": true,
+      "featured": false,
+      "downloads": 1234,
+      "rating": 4.6,
+      "tags": ["frontend", "design", "web", "ui"],
+      "skills": ["frontend-design"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/frontend-design",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/frontend-design/CHANGELOG.md"
+    },
+    {
+      "name": "internal-comms",
+      "version": "1.0.0",
+      "description": "Write internal communications like status reports, newsletters, and FAQs",
+      "category": "communication",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "internal-comms",
+      "verified": true,
+      "featured": false,
+      "downloads": 987,
+      "rating": 4.8,
+      "tags": ["communication", "writing", "business", "internal"],
+      "skills": ["internal-comms"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/internal-comms",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/internal-comms/CHANGELOG.md"
+    },
+    {
+      "name": "mcp-builder",
+      "version": "1.0.0",
+      "description": "Guide for creating high-quality MCP servers to integrate external APIs and services",
+      "category": "development",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "mcp-builder",
+      "verified": true,
+      "featured": true,
+      "downloads": 2156,
+      "rating": 4.9,
+      "tags": ["mcp", "integration", "api", "protocol"],
+      "skills": ["mcp-builder"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/mcp-builder",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/mcp-builder/CHANGELOG.md"
+    },
+    {
+      "name": "skill-creator",
+      "version": "1.0.0",
+      "description": "Guide for creating effective skills that extend Claude's capabilities",
+      "category": "development",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "skill-creator",
+      "verified": true,
+      "featured": true,
+      "downloads": 3421,
+      "rating": 4.9,
+      "tags": ["meta", "skill-creation", "development", "guide"],
+      "skills": ["skill-creator"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/skill-creator",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/skill-creator/CHANGELOG.md"
+    },
+    {
+      "name": "slack-gif-creator",
+      "version": "1.0.0",
+      "description": "Create animated GIFs optimized for Slack's size constraints",
+      "category": "creative",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "slack-gif-creator",
+      "verified": true,
+      "featured": false,
+      "downloads": 567,
+      "rating": 4.4,
+      "tags": ["gif", "animation", "slack", "media"],
+      "skills": ["slack-gif-creator"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/slack-gif-creator",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/slack-gif-creator/CHANGELOG.md"
+    },
+    {
+      "name": "theme-factory",
+      "version": "1.0.0",
+      "description": "Style artifacts with 10 pre-set professional themes or generate custom themes on-the-fly",
+      "category": "creative",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "theme-factory",
+      "verified": true,
+      "featured": false,
+      "downloads": 834,
+      "rating": 4.6,
+      "tags": ["themes", "styling", "design", "customization"],
+      "skills": ["theme-factory"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/theme-factory",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/theme-factory/CHANGELOG.md"
+    },
+    {
+      "name": "web-artifacts-builder",
+      "version": "1.0.0",
+      "description": "Build complex claude.ai HTML artifacts using React, Tailwind CSS, and shadcn/ui components",
+      "category": "development",
+      "author": {
+        "name": "Anthropic",
+        "email": "support@anthropic.com"
+      },
+      "repository": "https://github.com/anthropics/claude-skills",
+      "source": "web-artifacts-builder",
+      "verified": true,
+      "featured": true,
+      "downloads": 4521,
+      "rating": 4.8,
+      "tags": ["artifacts", "react", "tailwind", "web", "components"],
+      "skills": ["web-artifacts-builder"],
+      "dependencies": {},
+      "systemRequirements": {
+        "minVersion": "1.0.0",
+        "platforms": ["linux", "darwin", "win32"]
+      },
+      "license": "Apache-2.0",
+      "documentation": "https://github.com/anthropics/claude-skills/tree/main/web-artifacts-builder",
+      "changelog": "https://github.com/anthropics/claude-skills/blob/main/web-artifacts-builder/CHANGELOG.md"
     }
   ],
   "categories": [
@@ -198,9 +432,22 @@
     }
   ],
   "featured": [
+    "skill-creator",
+    "web-artifacts-builder",
+    "document-skills",
+    "mcp-builder",
     "base-utilities",
-    "creative-tools",
-    "productivity-pack",
-    "document-skills"
-  ]
+    "creative-tools"
+  ],
+  "stats": {
+    "totalPlugins": 15,
+    "totalDownloads": 28848,
+    "averageRating": 4.7,
+    "categories": {
+      "creative": 6,
+      "development": 6,
+      "productivity": 2,
+      "communication": 1
+    }
+  }
 }
