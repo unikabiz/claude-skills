@@ -1,0 +1,33 @@
+{
+  "name": "webapp-testing",
+  "version": "1.0.0",
+  "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+  "author": {
+    "name": "Anthropic",
+    "email": "support@anthropic.com",
+    "url": "https://anthropic.com"
+  },
+  "license": "Proprietary",
+  "category": "development",
+  "tags": ["testing", "playwright", "automation", "web", "qa"],
+  "skills": [
+    {
+      "path": ".",
+      "required": true,
+      "enabled": true
+    }
+  ],
+  "permissions": {
+    "filesystem": ["read", "write"],
+    "network": ["*"],
+    "tools": ["python"]
+  },
+  "systemRequirements": {
+    "python": ">=3.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthropics/skills"
+  },
+  "homepage": "https://github.com/anthropics/skills/tree/main/webapp-testing"
+}

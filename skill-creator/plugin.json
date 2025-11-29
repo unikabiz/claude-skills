@@ -1,0 +1,28 @@
+{
+  "name": "skill-creator",
+  "version": "1.0.0",
+  "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+  "author": {
+    "name": "Anthropic",
+    "email": "support@anthropic.com",
+    "url": "https://anthropic.com"
+  },
+  "license": "Proprietary",
+  "category": "development",
+  "tags": ["skill-development", "guide", "tutorial", "authoring"],
+  "skills": [
+    {
+      "path": ".",
+      "required": true,
+      "enabled": true
+    }
+  ],
+  "permissions": {
+    "filesystem": ["read", "write"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthropics/skills"
+  },
+  "homepage": "https://github.com/anthropics/skills/tree/main/skill-creator"
+}
