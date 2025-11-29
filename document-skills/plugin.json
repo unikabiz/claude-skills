@@ -1,0 +1,48 @@
+{
+  "name": "document-skills",
+  "version": "1.0.0",
+  "description": "Comprehensive document processing toolkit for working with PDF, DOCX, PPTX, and XLSX files. Extract, create, manipulate, and analyze documents programmatically.",
+  "author": {
+    "name": "Anthropic",
+    "email": "support@anthropic.com",
+    "url": "https://anthropic.com"
+  },
+  "license": "Proprietary",
+  "category": "development",
+  "tags": ["documents", "pdf", "docx", "pptx", "xlsx", "office", "productivity"],
+  "skills": [
+    {
+      "path": "./pdf",
+      "required": true,
+      "enabled": true
+    },
+    {
+      "path": "./docx",
+      "required": true,
+      "enabled": true
+    },
+    {
+      "path": "./pptx",
+      "required": true,
+      "enabled": true
+    },
+    {
+      "path": "./xlsx",
+      "required": true,
+      "enabled": true
+    }
+  ],
+  "permissions": {
+    "filesystem": ["read", "write"],
+    "tools": ["python", "node"]
+  },
+  "systemRequirements": {
+    "python": ">=3.8",
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthropics/skills"
+  },
+  "homepage": "https://github.com/anthropics/skills/tree/main/document-skills"
+}
